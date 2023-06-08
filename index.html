@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
@@ -13,12 +15,17 @@
 </head>
 <body>
     <nav class="navbar">
-        <button id="darkModeToggle">Modo Oscuro</button>
+      <div class="left-section">
+        <button id="darkModeToggle">
+          <i class="fa-solid fa-moon" style="color: #2c2c07;"></i> Modo Oscuro
+          <i class="fa-solid fa-sun" style="color: #d4c414; display: none;"></i>
+        </button>
         <div class="nav_logo"><img src="https://seeklogo.com/images/A/afa-2011-copa-america-logo-ECDB7D2C29-seeklogo.com.png" width="45px" alt=""></div>
+      </div>
         <div class="nav_items" id="_items">
             <a href="/">INICIO</a>
-            <a href="/bio">BIO</a>
-            <a href="/portafolio">PORTAFOLIO</a>
+            <a href="/bio">SOBRE NOSOTROS</a>
+            <a href="/portafolio">PRODUCTOS</a>
             <a href="/contacto">CONTACTO</a>
         </div>
         <div class="nav_toggle" id="_toggle">
@@ -46,22 +53,20 @@
     </div>
   </div>
 <!-- Slider -->
-<div class="slider-container ">
-    
-    <div class="slider-wrapper">
-      <img src="/assets/img/5ERYWKVTPJHUBEECBX3C7QS6NE.jpg" alt="Imagen 1">
-      <img src="/assets/img/5ERYWKVTPJHUBEECBX3C7QS6NE.jpg" alt="Imagen 1">
-      <img src="/assets/img/5ERYWKVTPJHUBEECBX3C7QS6NE.jpg" alt="Imagen 1">
-      <img src="/assets/img/5ERYWKVTPJHUBEECBX3C7QS6NE.jpg" alt="Imagen 1">
-      <img src="/assets/img/5ERYWKVTPJHUBEECBX3C7QS6NE.jpg" alt="Imagen 1">
-      <!-- <img src="/assets/img/ARGENTINA-CAMPEONES-750x485-1.png" alt="Imagen 2">
-      <img src="/assets/img/e510c3aa-e889-4556-8c0b-2bd501f07494_16-9-discover-aspect-ratio_default_0.jpg" alt="Imagen 3">
-      <img src="/assets/img/messi-argentina-qatar-mundial-campeon-GettyImages-1450108664-e1671389219708.jpg" alt="Imagen 4">
-      <img src="/assets/img/messi-copa-mundial.jpg" alt="Imagen 5"> -->
+<div class="slider-container">
+    <img class="slider-image" src="/assets/img/copa-argentina.jpg" alt="Imagen 1">
+    <img class="slider-image" src="/assets/img/la cpa negra.jpg" alt="Imagen 2">
+    <img class="slider-image" src="/assets/img/fideo-y-el-10.jpg" alt="Imagen 3">
+    <img class="slider-image" src="/assets/img/mesii y la araña.jpg" alt="Imagen 4">
+    <img class="slider-image" src="/assets/img/argentina-francia_109-efe.jpg" alt="Imagen 5">
+
+    <div class="slider-indicator">
+      <span class="active"></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-    <button class="slider-prev-button">&lt;</button>
-    <button class="slider-next-button">&gt;</button>
-    
   </div>
   <div class="swiperss">
 <!-- Swiper -->
@@ -180,7 +185,7 @@
 <!-- sdasd -->
   <section class="featured-section section2">
     <div class="container">
-      <h2>Descubre nuestras últimas novedades</h2>
+      <h2>Descubre nuestras Ultimas novedades</h2>
       <div class="featured-grid">
         <div class="featured-item">
           <img src="/assets/img/Remera1.jpg" alt="Imagen 1">

@@ -5,6 +5,8 @@ _toggle.onclick = () =>{
 }
 // Cards
 const darkModeToggle = document.getElementById('darkModeToggle');
+const moonIcon = darkModeToggle.querySelector('.fa-solid.fa-moon');
+const sunIcon = darkModeToggle.querySelector('.fa-solid.fa-sun');
 const body = document.body;
 
 // Verificar el estado actual del modo oscuro en el local storage
@@ -13,12 +15,23 @@ const darkModeEnabled = localStorage.getItem('darkModeEnabled') === 'true';
 // Aplicar el modo oscuro si está habilitado
 if (darkModeEnabled) {
   body.classList.add('dark-mode');
+  moonIcon.style.display = 'none';
+  sunIcon.style.display = 'inline-block';
 }
 
 // Cambiar el estado del modo oscuro al hacer clic en el botón
 darkModeToggle.addEventListener('click', function() {
   // Alternar la clase del modo oscuro en el body
   body.classList.toggle('dark-mode');
+
+  // Actualizar la visibilidad de los iconos
+  if (body.classList.contains('dark-mode')) {
+    moonIcon.style.display = 'none';
+    sunIcon.style.display = 'inline-block';
+  } else {
+    moonIcon.style.display = 'inline-block';
+    sunIcon.style.display = 'none';
+  }
 
   // Guardar el estado actual del modo oscuro en el local storage
   const isDarkModeEnabled = body.classList.contains('dark-mode');
@@ -27,36 +40,54 @@ darkModeToggle.addEventListener('click', function() {
 
 // Slider
 
-const sliderWrapper = document.querySelector('.slider-wrapper');
-const prevButton = document.querySelector('.slider-prev-button');
-const nextButton = document.querySelector('.slider-next-button');
+// Obtener referencias a los elementos del DOM
+const sliderImages = document.querySelectorAll('.slider-image');
+const sliderIndicators = document.querySelectorAll('.slider-indicator span');
 
-let currentIndex = 0;
-const slideCount = 5;
-const slideWidth = sliderWrapper.clientWidth;
+let currentSlide = 0;
 
-function slideTo(index) {
-  currentIndex = index;
-  sliderWrapper.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+// Mostrar la imagen actual y activar el indicador correspondiente
+function showSlide(index) {
+  sliderImages.forEach((image, i) => {
+    if (i === index) {
+      image.style.display = 'block';
+    } else {
+      image.style.display = 'none';
+    }
+  });
+
+  sliderIndicators.forEach((indicator, i) => {
+    if (i === index) {
+      indicator.classList.add('active');
+    } else {
+      indicator.classList.remove('active');
+    }
+  });
 }
 
-function autoSlide() {
-  currentIndex = (currentIndex + 1) % slideCount;
-  slideTo(currentIndex);
+// Avanzar al siguiente slide
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % sliderImages.length;
+  showSlide(currentSlide);
 }
 
-const autoSlideInterval = setInterval(autoSlide, 3000);
+// Cambiar al slide seleccionado por el indicador
+function goToSlide(index) {
+  currentSlide = index;
+  showSlide(currentSlide);
+}
 
-prevButton.addEventListener('click', () => {
-  clearInterval(autoSlideInterval);
-  currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-  slideTo(currentIndex);
-});
+// Mostrar el primer slide al cargar la página
+showSlide(currentSlide);
 
-nextButton.addEventListener('click', () => {
-  clearInterval(autoSlideInterval);
-  currentIndex = (currentIndex + 1) % slideCount;
-  slideTo(currentIndex);
+// Avanzar al siguiente slide cada 3,5 segundos
+setInterval(nextSlide, 3500);
+
+// Asignar evento de clic a cada indicador
+sliderIndicators.forEach((indicator, i) => {
+  indicator.addEventListener('click', () => {
+    goToSlide(i);
+  });
 });
 
 // Swiper
@@ -98,5 +129,40 @@ let swiper = new Swiper(".mySwiper", {
   function redirigir() {
     window.location.href = "formulario.html";
   }
+
+
+
+  // Formulario
+  // Show/hide password onClick of button using Javascript only
+
+// https://stackoverflow.com/questions/31224651/show-hide-password-onclick-of-button-using-javascript-only
+
+function show() {
+  var p = document.getElementById('pwd');
+  p.setAttribute('type', 'text');
+}
+
+function hide() {
+  var p = document.getElementById('pwd');
+  p.setAttribute('type', 'password');
+}
+
+var pwShown = 0;
+
+document.getElementById("eye").addEventListener("click", function () {
+  if (pwShown == 0) {
+      pwShown = 1;
+      show();
+  } else {
+      pwShown = 0;
+      hide();
+  }
+}, false);
+
+const logInButton = document.querySelector('.log-in');
+
+  logInButton.addEventListener('click', function() {
+    window.location.href = 'index.html';
+  });
 
   
