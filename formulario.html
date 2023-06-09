@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilosForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vesper+Libre&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -17,9 +20,11 @@
            <div class="con">
            <!--     Start  header Content  -->
            <header class="head-form">
-              <h2>Log In</h2>
+              <h2 style="font-family: 'Montserrat', sans-serif; margin-bottom: 1rem;
+              ">Log In</h2>
               <!--     A welcome message or an explanation of the login form -->
-              <p>Inicia sesion utilizando tu correo y contraseña</p>
+              <p style="font-family: 'Inter', sans-serif;
+          ">Inicia sesion utilizando tu correo y contraseña</p>
            </header>
            <!--     End  header Content  -->
            <br>
@@ -43,23 +48,26 @@
               <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>
              
         <!--      Show/hide password  -->
-             <span>
-                <i class="fa fa-eye" aria-hidden="true"  type="button" id="eye"></i>
-             </span>
+            
              
              
               <br>
         <!--        buttons -->
         <!--      button LogIn -->
-              <button class="log-in"> Log In </button>
+        <div class="containerSign"> 
+        <button class="log-in" style="font-family: 'Inter', sans-serif;"> Log In </button>
+        <button class="btn submits sign-up" style="font-family: 'Inter', sans-serif;">Sign Up 
+      </div>
            </div>
           
         <!--   other buttons -->
-           <div class="other">
+          
         <!--      Forgot Password button-->
-              <button class="btn submits frgt-pass">Forgot Password</button>
+        <div class="containerfrgt">
+              <button class="btn submits frgt-pass" style="font-family: 'Inter', sans-serif; " style="text-align:center">Forgot Password</button>
         <!--     Sign Up button -->
-              <button class="btn submits sign-up">Sign Up 
+      </div>
+
         <!--         Sign Up font icon -->
               <i class="fa fa-user-plus" aria-hidden="true"></i>
               </button>

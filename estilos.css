@@ -100,34 +100,49 @@ body {
 }
 /* Cards */
 .card-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2rem;
-    margin-bottom: 5rem;
-  }
-  
-  .card {
-    width: 300px;
-    padding: 20px;
-    background-color: #f0f0f0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  .card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    font-size: 14px;
-  }
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Añadido para centrar verticalmente */
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+.copa-del-mundo {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Añadido para centrar verticalmente */
+  flex-direction: column;
+}
+
+.icono-copa{
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin-top: 10px;
+}
 
   /* Slider */
 /* Estilos del contenedor del slider */

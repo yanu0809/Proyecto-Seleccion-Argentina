@@ -11,10 +11,11 @@
 
 /* Start body rules */
 body {
-    background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
-background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
-background-attachment: fixed;
-  background-repeat: no-repeat;
+background-image: url(/assets/img/messi-levanta.png);
+background-size: cover;
+background-repeat: no-repeat;
+
+
 
     font-family: 'Vibur', cursive;
 /*   the main font */
@@ -42,7 +43,9 @@ form {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-225deg, #E3FDF5 50%, #FFE6FA 50%);
+    background-image: linear-gradient(-225deg, #51e9bc 50%, #dd1aaf 50%);
+
+    background-image: radial-gradient(circle at 53.88% 27.97%, #a2f1ff 0, #6ed1ff 25%, #0cafed 50%, #008ed4 75%, #0071be 100%);
 }
 /* form Container */
 form .con {
@@ -107,7 +110,7 @@ header p {letter-spacing: 0.05em;}
 }
 /* inputs form  */
 input[class="form-input"]{
-    width: 240px;
+    width: 250px;
     height: 50px;
   
     margin-top: 2%;
@@ -115,7 +118,7 @@ input[class="form-input"]{
     
     font-size: 16px;
     font-family: 'Abel', sans-serif;
-    color: #5E6472;
+    color: #546da7;
   
     outline: none;
     border: none;
@@ -140,7 +143,7 @@ button {
     display: inline-block;
     color: #252537;
   
-    width: 280px;
+    width: 130px;
     height: 50px;
   
     padding: 0 20px;
@@ -165,11 +168,26 @@ button {
     margin-left: 2%;
 }
 
+
+.containerfrgt{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
 /*       Forgot Password button FAF3DD  */
-.frgt-pass {background: transparent;}
+.frgt-pass {background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.containerSign {
+    display: flex;
+
+}
 
 /*     Sign Up button  */
-.sign-up {background: #B8F2E6;}
+.sign-up {background: #e0d773;}
 
 
 /* buttons hover */
