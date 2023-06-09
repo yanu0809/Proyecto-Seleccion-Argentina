@@ -114,10 +114,10 @@ let swiper = new Swiper(".mySwiper", {
       return false;
     }
   
-    // Validación de contraseña sin caracteres especiales
-    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,15}$/;
+    // Validación de contraseña con al menos una letra minúscula, una letra mayúscula, un número y un carácter especial
+    let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
     if (!passwordRegex.test(password)) {
-      alert("La contraseña debe contener al menos una letra minúscula, una letra mayúscula y un número. No se permiten caracteres especiales.");
+      alert("La contraseña debe contener al menos una letra minúscula, una letra mayúscula, un número y un carácter especial");
       return false;
     }
   
@@ -125,10 +125,12 @@ let swiper = new Swiper(".mySwiper", {
     window.location.href = "index.html";
     return false;
   }
-// Redireccion de registro a formulario
+  
+  // Redireccionar a formulario.html
   function redirigir() {
     window.location.href = "formulario.html";
   }
+  
 
 
 

@@ -13,73 +13,70 @@
 <body>
     
 <!-- Formulario 1 -->
-      <div class="overlay">
-        <!-- LOGN IN FORM by Omar Dsoky -->
-        <form>
-           <!--   con = Container  for items in the form-->
-           <div class="con">
-           <!--     Start  header Content  -->
-           <header class="head-form">
-              <h2 style="font-family: 'Montserrat', sans-serif; margin-bottom: 1rem;
-              ">Log In</h2>
-              <!--     A welcome message or an explanation of the login form -->
-              <p style="font-family: 'Inter', sans-serif;
-          ">Inicia sesion utilizando tu correo y contraseña</p>
-           </header>
-           <!--     End  header Content  -->
-           <br>
-           <div class="field-set">
-             
-              <!--   user name -->
-                 <span class="input-item">
-                   <i class="fa fa-user-circle"></i>
-                 </span>
-                <!--   user name Input-->
-                 <input class="form-input" id="txt-input" type="text" placeholder="Correo" required>
-             
-              <br>
-             
-                   <!--   Password -->
-             
-              <span class="input-item">
-                <i class="fa fa-key"></i>
-               </span>
-              <!--   Password Input-->
-              <input class="form-input" type="password" placeholder="Contraseña" id="pwd"  name="password" required>
-             
-        <!--      Show/hide password  -->
-            
-             
-             
-              <br>
-        <!--        buttons -->
-        <!--      button LogIn -->
-        <div class="containerSign"> 
-        <button class="log-in" style="font-family: 'Inter', sans-serif;"> Log In </button>
-        <button class="btn submits sign-up" style="font-family: 'Inter', sans-serif;">Sign Up 
-      </div>
-           </div>
-          
-        <!--   other buttons -->
-          
-        <!--      Forgot Password button-->
-        <div class="containerfrgt">
-              <button class="btn submits frgt-pass" style="font-family: 'Inter', sans-serif; " style="text-align:center">Forgot Password</button>
-        <!--     Sign Up button -->
+<div class="overlay">
+  <!-- LOGN IN FORM by Omar Dsoky -->
+  <form onsubmit="return validateForm()">
+    <!-- con = Container  for items in the form -->
+    <div class="con">
+      <!-- Start  header Content  -->
+      <header class="head-form">
+        <h2 style="font-family: 'Montserrat', sans-serif; margin-bottom: 1rem;">Log In</h2>
+        <!-- A welcome message or an explanation of the login form -->
+        <p style="font-family: 'Inter', sans-serif;">Inicia sesión utilizando tu correo y contraseña</p>
+      </header>
+      <!-- End header Content  -->
+      <br>
+      <div class="field-set">
+
+        <!-- user name -->
+        <span class="input-item">
+          <i class="fa fa-user-circle"></i>
+        </span>
+        <!-- user name Input -->
+        <input class="form-input" id="username" type="text" placeholder="Correo" required>
+
+        <br>
+
+        <!-- Password -->
+
+        <span class="input-item">
+          <i class="fa fa-key"></i>
+        </span>
+        <!-- Password Input -->
+        <input class="form-input" type="password" placeholder="Contraseña" id="password" name="password" required>
+
+        <!-- Show/hide password -->
+
+        <br>
+
+        <!-- buttons -->
+        <!-- button LogIn -->
+        <div class="containerSign">
+          <button class="log-in" style="font-family: 'Inter', sans-serif;"> Log In </button>
+          <button class="btn submits sign-up" style="font-family: 'Inter', sans-serif;" onclick="redirigir()">Sign Up</button>
+        </div>
       </div>
 
-        <!--         Sign Up font icon -->
-              <i class="fa fa-user-plus" aria-hidden="true"></i>
-              </button>
-        <!--      End Other the Division -->
-           </div>
-             
-        <!--   End Conrainer  -->
-          </div>
-          
-          <!-- End Form -->
-        </form>
-        </div>
+      <!-- other buttons -->
+
+      <!-- Forgot Password button -->
+      <div class="containerfrgt">
+        <button class="btn submits frgt-pass" style="font-family: 'Inter', sans-serif; " style="text-align:center">Forgot Password</button>
+        <!-- Sign Up button -->
+      </div>
+
+      <!-- Sign Up font icon -->
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      </button>
+      <!-- End Other the Division -->
+    </div>
+
+    <!-- End Conrainer -->
+  </div>
+
+  <!-- End Form -->
+  </form>
+</div>
 
       <script src="index.js"></script>
 </body>
