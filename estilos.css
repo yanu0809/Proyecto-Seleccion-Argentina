@@ -4,7 +4,9 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
   margin: 0;
   padding: 0;
-  background-image: radial-gradient(circle at 85.02% 110.66%, #10ffff 0, #15f4fb 16.67%, #21e0ec 33.33%, #2dcada 50%, #36b5c7 66.67%, #3ba1b5 83.33%, #3f90a3 100%);  background-size: cover;
+  background-image: url(https://i.pinimg.com/736x/da/dd/16/dadd16aa9bab2d13b600614936e2351e.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 background-position: center;
 font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -107,7 +109,7 @@ align-items: center;
 }
 
 .card {
-  width: 300px;
+  width: 200px;
   padding: 20px;
   background-color: #f0f0f0;
   text-align: center;
